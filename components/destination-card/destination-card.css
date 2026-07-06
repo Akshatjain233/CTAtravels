@@ -54,7 +54,7 @@
 
 .destination-pill {
   background-color: var(--color-surface-white);
-  color: var(--color-text-primary);
+  color: var(--color-text-secondary);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
   padding: 4px 12px;
