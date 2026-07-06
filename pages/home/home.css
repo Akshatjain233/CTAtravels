@@ -171,7 +171,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding-top: var(--spacing-3xl);
+    padding-top: 140px;
     gap: var(--spacing-lg);
   }
 
