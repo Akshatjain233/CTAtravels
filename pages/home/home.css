@@ -1,0 +1,670 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: var(--color-text-primary);
+  overflow: hidden; /* Prevent horizontal scroll from slider */
+}
+
+/* --- Interactive Background Layer --- */
+.hero-bg-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  user-select: none;
+  touch-action: pan-y; /* Allow vertical scrolling, intercept horizontal for drag */
+}
+
+.hero-bg-container::before {
+  /* Subtle dark overlay for text readability, applied over the track */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.1) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-bg-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  /* transform is handled by JS for drag/momentum */
+}
+
+.hero-bg-slide {
+  position: relative;
+  flex: 0 0 100%; /* Each slide takes exactly 100% of container width */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* We slightly overlap slides or use crossfade during transition if desired in JS */
+}
+
+.hero-bg-media {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform, opacity;
+  /* Parallax transform handled by JS */
+  transform-origin: center;
+}
+
+.hero-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  padding-top: var(--spacing-4xl);
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.prime-badge {
+  display: inline-block;
+  background-color: var(--color-brand-yellow);
+  color: #000;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.prime-badge em {
+  font-style: italic;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.1;
+  margin-bottom: var(--spacing-md);
+}
+
+.reward-text {
+  font-size: var(--font-size-lg);
+  color: var(--color-brand-yellow);
+  margin-bottom: var(--spacing-lg);
+}
+
+.hero-bottom-text {
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-lg);
+  opacity: 0.9;
+}
+
+.hero-handwriting {
+  font-family: var(--font-handwriting);
+  font-size: 48px;
+  color: var(--color-brand-yellow);
+  transform: rotate(-5deg);
+  line-height: 1;
+  margin-top: 40px; /* Reduced from 120px to shift upward */
+  margin-right: 15%;
+}
+
+/* --- Carousel Indicator --- */
+.carousel-indicator {
+  position: absolute;
+  bottom: var(--spacing-3xl);
+  right: var(--spacing-3xl);
+  z-index: 10;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--color-surface-white);
+  background-color: transparent;
+  transition: background-color var(--motion-duration-instant);
+}
+
+.dot.active {
+  background-color: var(--color-surface-white);
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Mobile: hero relies on min-height:100vh + absolutely positioned search
+   bar/header, which only clears the title on wide viewports. Below 768px,
+   let the section flow with its content instead so nothing overlaps. */
+@media (max-width: 768px) {
+  .hero {
+    display: block;
+    min-height: 0;
+    padding: 0 0 var(--spacing-3xl);
+  }
+
+  .hero-container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: var(--spacing-xl);
+    gap: var(--spacing-lg);
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero-handwriting {
+    display: none;
+  }
+
+  .carousel-indicator {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+  }
+}
+
+/* --- Flash Sale Section --- */
+.about-video {
+  background-color: var(--color-surface-base); /* Dark background */
+  color: var(--color-surface-white);
+  padding: var(--spacing-4xl) 0;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  max-width: 500px;
+}
+
+.about-logo {
+  margin-bottom: var(--spacing-xs);
+}
+
+.about-title {
+  font-size: var(--font-size-3xl); /* Fixed invalid 4xl variable to make heading huge */
+  font-weight: var(--font-weight-medium);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.about-description {
+  font-size: var(--font-size-lg);
+  color: rgba(255,255,255,0.85); /* Slightly muted white for readability */
+  line-height: 1.5;
+}
+
+.about-media {
+  position: relative;
+  border-radius: var(--spacing-md);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background-color: #333; /* Fallback */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.about-video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  background-color: var(--color-surface-white);
+  color: var(--color-surface-base);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding-left: 4px; /* Optically center the triangle */
+}
+
+.play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  .about-text {
+    max-width: 100%;
+  }
+  .about-media {
+    order: -1;
+  }
+}
+
+.flash-sale {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--color-surface-white);
+  color: var(--color-text-secondary);
+}
+
+.section-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-medium);
+  /* Changed to Medium (500) as requested */
+  margin-bottom: var(--spacing-2xl);
+  letter-spacing: -0.5px;
+}
+
+.section-title strong {
+  font-weight: var(--font-weight-medium);
+  /* Keep the same weight as the rest of the heading */
+}
+
+@media (max-width: 768px) {
+  /* .section-title has no explicit line-height, so it inherits the 24px
+     global line-height against a 48px font. Desktop never wraps this
+     heading so the mismatch is invisible there; on mobile it wraps to
+     2-3 lines and they stack on top of each other without this fix. */
+  .section-title {
+    font-size: var(--font-size-2xl);
+    line-height: 1.25;
+  }
+}
+
+.carousel-track-container {
+  margin: 0 calc(var(--spacing-lg) * -1);
+  /* Negative margin to allow full bleed scroll on mobile, but keep cards aligned */
+  padding: 0 var(--spacing-lg);
+}
+
+.carousel-track {
+  display: flex;
+  gap: var(--spacing-lg);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--spacing-xl);
+
+  /* Hide scrollbar */
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-controls-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-xl);
+}
+
+.carousel-arrows {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.arrow-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-surface-base);
+  color: var(--color-surface-white);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity var(--motion-duration-instant);
+}
+
+.arrow-btn:hover {
+  opacity: 0.8;
+}
+
+/* --- Features Section --- */
+.features {
+  padding: var(--spacing-4xl) 0;
+  background-color: #f8f8f8;
+  /* Light gray background */
+}
+
+.features-title {
+  margin-bottom: var(--spacing-3xl);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.5px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Destinations Section --- */
+.destinations {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--color-surface-white);
+}
+
+.destinations .container {
+  padding-right: 7%;
+  /* Match the global 7% left padding for perfect symmetry */
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 1024px) {
+  .destinations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* --- About Video Section --- */
+.about-video {
+  background-color: #121212;
+  color: var(--color-surface-white);
+  padding: var(--spacing-4xl) 0;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+  padding-right: 7%; /* Match the global 7% left padding for perfect symmetry */
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  max-width: 500px;
+}
+
+.about-logo {
+  margin-bottom: var(--spacing-xs);
+}
+
+.about-title {
+  font-size: var(--font-size-3xl); /* Fixed invalid 4xl variable to make heading huge */
+  font-weight: var(--font-weight-medium);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.about-description {
+  font-size: var(--font-size-lg);
+  color: rgba(255,255,255,0.85);
+  line-height: 1.5;
+}
+
+.about-media {
+  position: relative;
+  border-radius: var(--spacing-md);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background-color: #333;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.about-video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  background-color: var(--color-surface-white);
+  color: var(--color-surface-base);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding-left: 4px;
+}
+
+.play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  .about-text {
+    max-width: 100%;
+  }
+  .about-media {
+    order: -1;
+  }
+}
+
+/* --- Referral Banner Section --- */
+.referral-banner {
+  width: 100%;
+  height: 400px;
+  background-image: url('https://images.unsplash.com/photo-1506947411487-a56738267384?q=80&w=2000&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 15%;
+}
+
+.referral-content {
+  color: var(--color-surface-white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  max-width: 500px;
+}
+
+.referral-content h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-medium);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.referral-content p {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .referral-banner {
+    justify-content: center;
+    padding: var(--spacing-2xl);
+    text-align: center;
+  }
+  .referral-content {
+    align-items: center;
+  }
+}
+
+/* --- Travel Stories Reviews Section --- */
+.reviews {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--color-surface-white); /* White background */
+  text-align: center;
+}
+
+.reviews-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3xl);
+  margin-top: var(--spacing-3xl);
+  margin-bottom: var(--spacing-2xl);
+  position: relative;
+}
+
+.dark-arrow {
+  background-color: var(--color-surface-base);
+  color: var(--color-surface-white);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.dark-arrow:hover {
+  opacity: 0.8;
+}
+
+.review-dots {
+  justify-content: center;
+  margin-top: var(--spacing-xl);
+}
+
+.review-dots .dot {
+  background-color: transparent;
+  border: 2px solid var(--color-surface-base);
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+}
+
+.review-dots .dot.active {
+  background-color: var(--color-surface-base);
+}
+
+@media (max-width: 900px) {
+  .dark-arrow {
+    display: none; /* Hide arrows on mobile for touch swipe */
+  }
+}
+
+/* --- Tour Tabs Section --- */
+.tour-tabs-section {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--color-surface-white);
+}
+
+.section-tabs-header {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: center;
+  margin-bottom: var(--spacing-2xl);
+  flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: var(--font-size-3xl); /* Reverted to 3xl to match Flash Sale heading */
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  color: #5e5e5e; /* Inactive color matching 60% off text */
+  padding: 0;
+  letter-spacing: -0.5px;
+  transition: color 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: #333;
+}
+
+.tab-btn.active {
+  color: #121212; /* Solid black primary color for active tab */
+}
+
+/* On mobile, the tabbed single-carousel layout is replaced by three
+   separate stacked sections (below), same pattern as Flash Sale / Best
+   Sellers above — no tab control needed at all. */
+.tour-mobile-section {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .tour-tabs-section {
+    display: none;
+  }
+
+  .tour-mobile-section {
+    display: block;
+  }
+}

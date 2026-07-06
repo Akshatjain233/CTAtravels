@@ -1,0 +1,234 @@
+/* --- Footer Component --- */
+.footer {
+  background-color: #121212; /* Custom dark background as requested */
+  color: var(--color-surface-white);
+  padding: var(--spacing-4xl) 0 var(--spacing-2xl);
+  font-family: var(--font-primary);
+}
+
+.footer-container {
+  padding: 0 7%; /* Match global padding */
+}
+
+/* --- Top Section (Links) --- */
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-4xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.footer-heading {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-surface-white);
+}
+
+.footer-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm); /* Tight gap for links */
+}
+
+.footer-link-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.footer-link-list a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: var(--font-size-sm); /* Slightly smaller font size for footer links */
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.footer-link-list a:hover {
+  color: var(--color-surface-white);
+  text-decoration: underline;
+}
+
+.footer-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.8;
+}
+
+/* --- Dividers --- */
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: var(--spacing-2xl) 0;
+}
+
+/* --- Middle Section (Region/Language) --- */
+.footer-middle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.9);
+  padding: var(--spacing-xs) 0;
+}
+
+.country-flag {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --- Bottom Section (App stores, Trustpilot, Socials) --- */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-2xl);
+}
+
+.footer-bottom-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.app-badges {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.app-badge-btn {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--spacing-xs);
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.app-badge-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.app-badge-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.app-badge-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.app-badge-small {
+  font-size: 8px;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+.app-badge-large {
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2;
+}
+
+/* Trustpilot Custom Styling */
+.trustpilot-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.trustpilot-stars {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+}
+
+.trustpilot-stars-images {
+  display: flex;
+  gap: 2px;
+}
+
+.star-img {
+  width: 20px;
+  height: 20px;
+  background-color: #00b67a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.trustpilot-reviews {
+  font-size: var(--font-size-xs);
+  color: rgba(255,255,255,0.7);
+}
+
+.trustpilot-reviews strong {
+  color: white;
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.social-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.social-btn:hover {
+  background-color: white;
+  color: #121212;
+}
+
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-bottom-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

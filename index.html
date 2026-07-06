@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTAtravels - Morocco: The Kingdom of Light</title>
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="components/button/button.css">
+  <link rel="stylesheet" href="components/header/header.css">
+  <link rel="stylesheet" href="components/search-bar/search-bar.css">
+  <link rel="stylesheet" href="components/card/card.css">
+  <link rel="stylesheet" href="components/feature-card/feature-card.css">
+  <link rel="stylesheet" href="components/destination-card/destination-card.css">
+  <link rel="stylesheet" href="components/review-card/review-card.css">
+  <link rel="stylesheet" href="components/footer/footer.css">
+  <link rel="stylesheet" href="pages/home/home.css">
+</head>
+
+<body>
+  <!-- Top Banner -->
+  <div class="top-banner">
+    <div>Up to ₹500 reward | Book by June 30.</div>
+    <div class="badge">See how</div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero-section">
+    <!-- Interactive Background Layer -->
+    <div class="hero-bg-container" id="hero-bg-container">
+      <div class="hero-bg-track" id="hero-bg-track">
+        <!-- Slide 1 (video plays first on load) -->
+        <div class="hero-bg-slide">
+          <div class="hero-bg-media">
+            <video class="hero-bg-video" src="home_videos/videoplayback.mp4" autoplay muted playsinline></video>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="hero-bg-slide">
+          <div class="hero-bg-media" style="background-image: url('https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=2000&auto=format&fit=crop');"></div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="hero-bg-slide">
+          <div class="hero-bg-media" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000&auto=format&fit=crop');"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-container">
+        <button class="icon-btn mobile-menu-btn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="24" height="24">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <nav class="nav-left">
+          <a href="#" class="nav-link">Destinations</a>
+          <a href="#" class="nav-link">Trip Style</a>
+          <a href="#" class="nav-link">Deals</a>
+        </nav>
+
+        <a href="#" class="logo-link">
+          <span class="logo-text">CTAtravels</span>
+        </a>
+
+        <nav class="nav-right">
+          <span class="nav-link">Book now: 1800-123-4567</span>
+          <a href="#" class="nav-link">Help</a>
+          <div class="lang-selector">
+            <button class="icon-btn" aria-label="Language selector">
+              <!-- Indian Flag SVG -->
+              <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <circle cx="18" cy="18" r="18" fill="#eee" />
+                <rect x="0" y="0" width="36" height="12" fill="#FF9933" />
+                <rect x="0" y="12" width="36" height="12" fill="#ffffff" />
+                <rect x="0" y="24" width="36" height="12" fill="#138808" />
+                <circle cx="18" cy="18" r="3" fill="none" stroke="#000080" stroke-width="1" />
+                <circle cx="18" cy="18" r="0.6" fill="#000080" />
+              </svg>
+            </button>
+          </div>
+          <button class="icon-btn" aria-label="User profile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+        </nav>
+
+        <button class="icon-btn mobile-call-btn" aria-label="Call us">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Search Container -->
+    <div class="search-container">
+      <div class="search-bar search-bar-full">
+        <div class="search-field">
+          <span class="search-label">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.6L2.6 9c-.3.4-.2 1 .3 1.3L7 13l-4 4-2.5-.5c-.4-.1-.8.2-1 .6L-.4 18c-.2.4.1.8.6.9l3.4.4.4 3.4c.1.5.5.8.9.6l.9-1c.4-.2.7-.6.6-1l-.5-2.5 4-4 2.7 4.1c.3.5.9.6 1.3.3l2.2-1.1c.4-.2.7-.6.6-1.1z"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Departure city
+          </span>
+          <input type="text" class="search-input" value="Seattle">
+        </div>
+
+        <div class="search-field">
+          <span class="search-label">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="none" stroke="currentColor"
+                stroke-width="2" />
+              <circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+            To
+          </span>
+          <input type="text" class="search-input" placeholder="Anywhere">
+        </div>
+
+        <div class="search-field">
+          <span class="search-label">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" fill="none" stroke="currentColor"
+                stroke-width="2" />
+              <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2" />
+              <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2" />
+              <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2" />
+            </svg>
+            Departure date
+          </span>
+          <input type="text" class="search-input" placeholder="Select date">
+        </div>
+
+        <button class="btn-search" aria-label="Search">
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="search-bar search-bar-simple">
+        <input type="text" class="search-input" placeholder="Search for your next destination">
+        <button class="btn-search" aria-label="Search">
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="prime-badge" id="hero-badge"><em>NEW EXPERIENCES</em></div>
+        <h1 class="hero-title" id="hero-title">Discover the world<br>at your own pace</h1>
+        <p class="hero-subtitle reward-text" id="hero-subtitle">Unforgettable adventures await</p>
+        <button class="btn-primary">Explore trips</button>
+        <p class="hero-bottom-text" id="hero-bottom-text">Explore hidden gems and vibrant cultures</p>
+      </div>
+
+      <div class="hero-handwriting" id="hero-handwriting">
+        Start your<br>journey today
+      </div>
+    </div>
+
+    <!-- Carousel Indicator -->
+    <div class="carousel-indicator">
+      <div class="carousel-dots" id="hero-dots">
+        <button class="dot active" aria-label="Slide 1"></button>
+        <button class="dot" aria-label="Slide 2"></button>
+        <button class="dot" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flash Sale Section -->
+  <section class="flash-sale">
+    <div class="container">
+      <h2 class="section-title"><strong>Flash Sale.</strong> <span style="color: #5e5e5e;">60% off crafters' top
+          picks</span></h2>
+
+      <div class="carousel-track-container">
+        <div class="carousel-track">
+          <!-- Card 1 -->
+          <a href="#" class="trip-card"
+            style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=600&auto=format&fit=crop');">
+            <div class="card-badge">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg> Flash Sale
+            </div>
+            <h3 class="card-title">Leh, Nubra Valley & Pangong Tso</h3>
+            <p class="card-subtitle">Ladakh in 9 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹1,299</span>
+                <span class="price-original">₹3,249</span>
+              </div>
+              <div class="discount-badge">60% off</div>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="#" class="trip-card"
+            style="background-image: url('https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=600&auto=format&fit=crop');">
+            <div class="card-badge">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg> Flash Sale
+            </div>
+            <h3 class="card-title">Kashmir Paradise: Srinagar & Gulmarg</h3>
+            <p class="card-subtitle">Kashmir in 7 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹999</span>
+                <span class="price-original">₹2,499</span>
+              </div>
+              <div class="discount-badge">60% off</div>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="#" class="trip-card"
+            style="background-image: url('https://images.unsplash.com/photo-1524429656589-6633a470097c?q=80&w=600&auto=format&fit=crop');">
+            <div class="card-badge">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg> Flash Sale
+            </div>
+            <h3 class="card-title">Manali to Spiti: The Great Himalayan Road Trip</h3>
+            <p class="card-subtitle">Himachal Pradesh in 10 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹1,199</span>
+                <span class="price-original">₹2,999</span>
+              </div>
+              <div class="discount-badge">60% off</div>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="#" class="trip-card"
+            style="background-image: url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=600&auto=format&fit=crop');">
+            <div class="card-badge">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg> Flash Sale
+            </div>
+            <h3 class="card-title">Dharamshala & Kasol Monastery Retreat</h3>
+            <p class="card-subtitle">Himachal Pradesh in 6 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹749</span>
+                <span class="price-original">₹1,879</span>
+              </div>
+              <div class="discount-badge">60% off</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="carousel-controls-bottom">
+        <button class="btn-primary"
+          style="background-color: var(--color-surface-base); color: var(--color-surface-white);">See all deals</button>
+        <div class="carousel-arrows">
+          <button class="arrow-btn" aria-label="Previous"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M15 18l-6-6 6-6" />
+            </svg></button>
+          <button class="arrow-btn" aria-label="Next"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container inset-container">
+      <h2 class="section-title features-title">Why thousands book with CTAtravels</h2>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="M9 12l2 2 4-4" />
+          </svg>
+          <div class="feature-content">
+            <h3 class="feature-title">Best Price Guarantee</h3>
+            <p class="feature-text">Unbeatable fares as standard. We're so confident you won't find a better deal
+              elsewhere we'll <span class="underline-link">match it</span> within 24 hours if you do.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            <circle cx="12" cy="12" r="10" />
+          </svg>
+          <div class="feature-content">
+            <h3 class="feature-title">Extraordinary experiences</h3>
+            <p class="feature-text">Our travel crafters work closely with local partners to design perfectly-balanced
+              itineraries full of authentic experiences for small groups.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+            <path d="M12 18h.01" />
+          </svg>
+          <div class="feature-content">
+            <h3 class="feature-title">Everything taken care of</h3>
+            <p class="feature-text">Every detail of your trip planned and booked by experts, plus <span
+                class="underline-link">24/7 support</span> and updates via our unique Traveler's App.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Best Sellers Section -->
+  <section class="flash-sale">
+    <div class="container inset-container">
+      <h2 class="section-title"><strong>Best Sellers.</strong></h2>
+
+      <div class="carousel-track-container">
+        <div class="carousel-track">
+          <!-- Card 1 -->
+          <a href="#" class="trip-card"
+            style="background-image: url('https://images.unsplash.com/photo-1470770903676-69b98201ea1c?q=80&w=600&auto=format&fit=crop');">
+            <div class="card-badge dark">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 21h8m-4-10v10M5 5h14l-1.5 5.5a2.5 2.5 0 0 1-2.4 1.8H8.9a2.5 2.5 0 0 1-2.4-1.8L5 5z" />
+              </svg> Best Seller
+            </div>
+            <h3 class="card-title">Classic Ladakh: Leh, Khardung La & Nubra</h3>
+            <p class="card-subtitle">Ladakh in 8 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹1,199</span>
+                <span class="price-original">₹1,799</span>
+              </div>
+              <div class="discount-badge">33% off</div>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="#" class="trip-card"
+            style="background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=600&auto=format&fit=crop');">
+            <div class="card-badge dark">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 21h8m-4-10v10M5 5h14l-1.5 5.5a2.5 2.5 0 0 1-2.4 1.8H8.9a2.5 2.5 0 0 1-2.4-1.8L5 5z" />
+              </svg> Best Seller
+            </div>
+            <h3 class="card-title">Kashmir Great Lakes Trek</h3>
+            <p class="card-subtitle">Kashmir in 7 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹899</span>
+                <span class="price-original">₹1,349</span>
+              </div>
+              <div class="discount-badge">33% off</div>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="#" class="trip-card"
+            style="background-image: url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600&auto=format&fit=crop');">
+            <div class="card-badge dark">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 21h8m-4-10v10M5 5h14l-1.5 5.5a2.5 2.5 0 0 1-2.4 1.8H8.9a2.5 2.5 0 0 1-2.4-1.8L5 5z" />
+              </svg> Best Seller
+            </div>
+            <h3 class="card-title">Manali–Kasol–Spiti Circuit</h3>
+            <p class="card-subtitle">Himachal Pradesh in 12 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹1,349</span>
+                <span class="price-original">₹1,999</span>
+              </div>
+              <div class="discount-badge">32% off</div>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="#" class="trip-card"
+            style="background-image: url('https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=600&auto=format&fit=crop');">
+            <div class="card-badge dark">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 21h8m-4-10v10M5 5h14l-1.5 5.5a2.5 2.5 0 0 1-2.4 1.8H8.9a2.5 2.5 0 0 1-2.4-1.8L5 5z" />
+              </svg> Best Seller
+            </div>
+            <h3 class="card-title">Shimla & Dalhousie Hill Escape</h3>
+            <p class="card-subtitle">Himachal Pradesh in 6 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹699</span>
+                <span class="price-original">₹999</span>
+              </div>
+              <div class="discount-badge">30% off</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="carousel-controls-bottom">
+        <button class="btn-primary"
+          style="background-color: var(--color-surface-base); color: var(--color-surface-white);">See all deals</button>
+        <div class="carousel-arrows">
+          <button class="arrow-btn" aria-label="Previous" style="opacity: 0.3; cursor: not-allowed;"><svg
+              viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M15 18l-6-6 6-6" />
+            </svg></button>
+          <button class="arrow-btn" aria-label="Next"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinations Section -->
+  <section class="destinations">
+    <div class="container inset-container">
+      <h2 class="section-title">Where to next?</h2>
+
+      <div class="destinations-grid">
+        <!-- Card 1 -->
+        <a href="#" class="destination-card"
+          style="background-image: url('https://images.unsplash.com/photo-1571401835393-8c5f35328320?q=80&w=600&auto=format&fit=crop');">
+          <div class="destination-content">
+            <h3 class="destination-title">Leh</h3>
+            <span class="destination-pill">18 Trips</span>
+          </div>
+        </a>
+        <!-- Card 2 -->
+        <a href="#" class="destination-card"
+          style="background-image: url('https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=600&auto=format&fit=crop');">
+          <div class="destination-content">
+            <h3 class="destination-title">Nubra Valley</h3>
+            <span class="destination-pill">9 Trips</span>
+          </div>
+        </a>
+        <!-- Card 3 -->
+        <a href="#" class="destination-card"
+          style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=600&auto=format&fit=crop');">
+          <div class="destination-content">
+            <h3 class="destination-title">Pangong Lake</h3>
+            <span class="destination-pill">11 Trips</span>
+          </div>
+        </a>
+        <!-- Card 4 -->
+        <a href="#" class="destination-card"
+          style="background-image: url('https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=600&auto=format&fit=crop');">
+          <div class="destination-content">
+            <h3 class="destination-title">Srinagar</h3>
+            <span class="destination-pill">16 Trips</span>
+          </div>
+        </a>
+        <!-- Card 5 -->
+        <a href="#" class="destination-card"
+          style="background-image: url('https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop');">
+          <div class="destination-content">
+            <h3 class="destination-title">Gulmarg</h3>
+            <span class="destination-pill">8 Trips</span>
+          </div>
+        </a>
+        <!-- Card 6 -->
+        <a href="#" class="destination-card"
+          style="background-image: url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600&auto=format&fit=crop');">
+          <div class="destination-content">
+            <h3 class="destination-title">Manali</h3>
+            <span class="destination-pill">22 Trips</span>
+          </div>
+        </a>
+        <!-- Card 7 -->
+        <a href="#" class="destination-card"
+          style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=600&auto=format&fit=crop');">
+          <div class="destination-content">
+            <h3 class="destination-title">Spiti Valley</h3>
+            <span class="destination-pill">12 Trips</span>
+          </div>
+        </a>
+        <!-- Card 8 -->
+        <a href="#" class="destination-card"
+          style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop');">
+          <div class="destination-content">
+            <h3 class="destination-title">Kasol</h3>
+            <span class="destination-pill">14 Trips</span>
+          </div>
+        </a>
+        <!-- Card 9 -->
+        <a href="#" class="destination-card"
+          style="background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=600&auto=format&fit=crop');">
+          <div class="destination-content">
+            <h3 class="destination-title">Dharamshala</h3>
+            <span class="destination-pill">13 Trips</span>
+          </div>
+        </a>
+        <!-- Card 10 -->
+        <a href="#" class="destination-card"
+          style="background-image: url('https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=600&auto=format&fit=crop');">
+          <div class="destination-content">
+            <h3 class="destination-title">Shimla</h3>
+            <span class="destination-pill">19 Trips</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Video Section -->
+  <section class="about-video">
+    <div class="container about-container">
+      <div class="about-text">
+        <div class="about-logo">
+          <span class="logo-text">CTAtravels</span>
+        </div>
+        <h2 class="about-title">Extraordinary vacation packages to exotic destinations</h2>
+        <p class="about-description">Your affordable online tour operator. Our expert Travel Crafters design extraordinary vacation packages at never-before-seen prices to give you a truly unforgettable experience.</p>
+      </div>
+      
+      <div class="about-media">
+        <video src="home_videos/videoplayback.mp4" class="about-video-thumb" id="about-video" muted loop playsinline></video>
+        <button class="play-btn" aria-label="Play video" id="about-play-btn">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Last Minute Deals Section -->
+  <section class="flash-sale">
+    <div class="container inset-container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-sm);">Last-minute travel deals</h2>
+      <p style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-2xl);">Fancy a getaway sooner rather than later? Catch a last-minute deal to top destinations.</p>
+      
+      <div class="carousel-track-container">
+        <div class="carousel-track">
+          <!-- Card 1 -->
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Weekend in Manali</h3>
+            <p class="card-subtitle">Himachal Pradesh in 4 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹399</span>
+                <span class="price-original">₹599</span>
+              </div>
+              <div class="discount-badge" style="background-color: var(--color-surface-white); color: var(--color-text-secondary);">33% off</div>
+            </div>
+          </a>
+          <!-- Card 2 -->
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Srinagar Houseboat Escape</h3>
+            <p class="card-subtitle">Kashmir in 5 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹549</span>
+                <span class="price-original">₹799</span>
+              </div>
+              <div class="discount-badge" style="background-color: var(--color-surface-white); color: var(--color-text-secondary);">31% off</div>
+            </div>
+          </a>
+          <!-- Card 3 -->
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Spiti Valley Adventure</h3>
+            <p class="card-subtitle">Himachal Pradesh in 6 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹649</span>
+                <span class="price-original">₹949</span>
+              </div>
+              <div class="discount-badge" style="background-color: var(--color-surface-white); color: var(--color-text-secondary);">32% off</div>
+            </div>
+          </a>
+          <!-- Card 4 -->
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Nubra Valley Desert Safari</h3>
+            <p class="card-subtitle">Ladakh in 5 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹599</span>
+                <span class="price-original">₹899</span>
+              </div>
+              <div class="discount-badge" style="background-color: var(--color-surface-white); color: var(--color-text-secondary);">33% off</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="carousel-controls-bottom">
+        <button class="btn-primary" style="background-color: var(--color-surface-base); color: var(--color-surface-white);">See all deals</button>
+        <div class="carousel-arrows">
+          <button class="arrow-btn" aria-label="Previous" style="opacity: 0.3; cursor: not-allowed;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6" /></svg></button>
+          <button class="arrow-btn" aria-label="Next"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" /></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Stories Reviews Section -->
+  <section class="reviews">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-sm); text-align: center;">CTAtravels Travel Stories</h2>
+      <p style="font-size: var(--font-size-lg); color: var(--color-text-secondary); text-align: center;">Creating unforgettable memories, one traveler at a time</p>
+      
+      <div class="reviews-carousel-wrapper">
+        <!-- Left Arrow -->
+        <button class="arrow-btn dark-arrow" aria-label="Previous review">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6" /></svg>
+        </button>
+
+        <!-- Review Card -->
+        <div class="review-card">
+          <div class="review-media">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop" alt="Mountain view in Ladakh" class="review-image">
+            <div class="review-image-caption">Leh - Ladakh</div>
+          </div>
+          <div class="review-content">
+            <div class="review-location">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Ladakh</span>
+            </div>
+
+            <h3 class="review-title">An unforgettable Himalayan adventure</h3>
+
+            <p class="review-text">
+              Our trip through Leh, Nubra Valley and Pangong Tso was beyond anything we imagined. The drivers knew every mountain pass by heart and the homestays were warm and welcoming. CTAtravels handled the high-altitude logistics perfectly — we never had to worry about a thing.
+            </p>
+
+            <div class="review-rating">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+
+            <div class="reviewer-name">Priya S.</div>
+            <div class="reviewer-details">IN (CTAtravels India)</div>
+          </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="arrow-btn dark-arrow" aria-label="Next review">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" /></svg>
+        </button>
+      </div>
+
+      <!-- Dots Pagination -->
+      <div class="carousel-dots review-dots">
+        <button class="dot active" aria-label="Slide 1"></button>
+        <button class="dot" aria-label="Slide 2"></button>
+        <button class="dot" aria-label="Slide 3"></button>
+        <button class="dot" aria-label="Slide 4"></button>
+        <button class="dot" aria-label="Slide 5"></button>
+        <button class="dot" aria-label="Slide 6"></button>
+        <button class="dot" aria-label="Slide 7"></button>
+        <button class="dot" aria-label="Slide 8"></button>
+        <button class="dot" aria-label="Slide 9"></button>
+        <button class="dot" aria-label="Slide 10"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tour Tabs Section (desktop: tabbed single carousel) -->
+  <section class="tour-tabs-section flash-sale">
+    <div class="container inset-container">
+      <div class="section-tabs-header">
+        <button class="tab-btn active" data-category="personal">Personal tours</button>
+        <button class="tab-btn" data-category="group">Group tours</button>
+        <button class="tab-btn" data-category="honeymoon">Couple tours</button>
+      </div>
+
+      <div class="carousel-track-container" id="dynamic-tours-container">
+        <!-- Filled dynamically by JavaScript -->
+        <div class="carousel-track" id="dynamic-tours-track">
+          <!-- Cards will be injected here -->
+        </div>
+      </div>
+
+      <div class="carousel-controls-bottom">
+        <button class="btn-primary" style="background-color: var(--color-surface-base); color: var(--color-surface-white);">See all deals</button>
+        <div class="carousel-arrows">
+          <button class="arrow-btn" aria-label="Previous" style="opacity: 0.3; cursor: not-allowed;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6" /></svg></button>
+          <button class="arrow-btn" aria-label="Next"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" /></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tour categories (mobile: three separate sections instead of tabs, same pattern as Flash Sale / Best Sellers above) -->
+  <section class="flash-sale tour-mobile-section">
+    <div class="container inset-container">
+      <h2 class="section-title"><strong>Personal tours.</strong></h2>
+      <div class="carousel-track-container">
+        <div class="carousel-track">
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Solo Trek: Hampta Pass</h3>
+            <p class="card-subtitle">Himachal Pradesh in 7 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹899</span>
+                <span class="price-original">₹1,199</span>
+              </div>
+              <div class="discount-badge">25% off</div>
+            </div>
+          </a>
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1571401835393-8c5f35328320?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Leh Ladakh Self-Drive Expedition</h3>
+            <p class="card-subtitle">Ladakh in 10 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹1,599</span>
+                <span class="price-original">₹2,199</span>
+              </div>
+              <div class="discount-badge">27% off</div>
+            </div>
+          </a>
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Kashmir Solo Photography Tour</h3>
+            <p class="card-subtitle">Kashmir in 6 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹749</span>
+                <span class="price-original">₹999</span>
+              </div>
+              <div class="discount-badge">25% off</div>
+            </div>
+          </a>
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Spiti Valley Backpacking</h3>
+            <p class="card-subtitle">Himachal Pradesh in 9 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹999</span>
+                <span class="price-original">₹1,399</span>
+              </div>
+              <div class="discount-badge">29% off</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="carousel-controls-bottom">
+        <button class="btn-primary" style="background-color: var(--color-surface-base); color: var(--color-surface-white);">See all deals</button>
+        <div class="carousel-arrows">
+          <button class="arrow-btn" aria-label="Previous" style="opacity: 0.3; cursor: not-allowed;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6" /></svg></button>
+          <button class="arrow-btn" aria-label="Next"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" /></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flash-sale tour-mobile-section">
+    <div class="container inset-container">
+      <h2 class="section-title"><strong>Group tours.</strong></h2>
+      <div class="carousel-track-container">
+        <div class="carousel-track">
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Golden Triangle of Ladakh: Leh–Nubra–Pangong</h3>
+            <p class="card-subtitle">Ladakh in 8 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹1,099</span>
+                <span class="price-original">₹1,599</span>
+              </div>
+              <div class="discount-badge">31% off</div>
+            </div>
+          </a>
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Kashmir Group Expedition: Srinagar & Gulmarg</h3>
+            <p class="card-subtitle">Kashmir in 7 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹949</span>
+                <span class="price-original">₹1,349</span>
+              </div>
+              <div class="discount-badge">30% off</div>
+            </div>
+          </a>
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Manali Adventure Camp</h3>
+            <p class="card-subtitle">Himachal Pradesh in 6 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹699</span>
+                <span class="price-original">₹999</span>
+              </div>
+              <div class="discount-badge">30% off</div>
+            </div>
+          </a>
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Spiti Valley Group Expedition</h3>
+            <p class="card-subtitle">Himachal Pradesh in 9 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹1,199</span>
+                <span class="price-original">₹1,699</span>
+              </div>
+              <div class="discount-badge">29% off</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="carousel-controls-bottom">
+        <button class="btn-primary" style="background-color: var(--color-surface-base); color: var(--color-surface-white);">See all deals</button>
+        <div class="carousel-arrows">
+          <button class="arrow-btn" aria-label="Previous" style="opacity: 0.3; cursor: not-allowed;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6" /></svg></button>
+          <button class="arrow-btn" aria-label="Next"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" /></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flash-sale tour-mobile-section">
+    <div class="container inset-container">
+      <h2 class="section-title"><strong>Couple tours.</strong></h2>
+      <div class="carousel-track-container">
+        <div class="carousel-track">
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Romantic Kashmir: Houseboat & Shikara Rides</h3>
+            <p class="card-subtitle">Kashmir in 6 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹1,299</span>
+                <span class="price-original">₹1,799</span>
+              </div>
+              <div class="discount-badge">28% off</div>
+            </div>
+          </a>
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1524429656589-6633a470097c?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Honeymoon in Manali & Solang Valley</h3>
+            <p class="card-subtitle">Himachal Pradesh in 5 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹899</span>
+                <span class="price-original">₹1,249</span>
+              </div>
+              <div class="discount-badge">28% off</div>
+            </div>
+          </a>
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Starlit Nights in Spiti Valley</h3>
+            <p class="card-subtitle">Himachal Pradesh in 7 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹1,099</span>
+                <span class="price-original">₹1,499</span>
+              </div>
+              <div class="discount-badge">27% off</div>
+            </div>
+          </a>
+          <a href="#" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=600&auto=format&fit=crop');">
+            <h3 class="card-title">Leh Ladakh Honeymoon Special</h3>
+            <p class="card-subtitle">Ladakh in 8 Days</p>
+            <div class="card-price-row">
+              <div class="price-info">
+                <span class="price-from">From ₹1,499</span>
+                <span class="price-original">₹2,099</span>
+              </div>
+              <div class="discount-badge">29% off</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="carousel-controls-bottom">
+        <button class="btn-primary" style="background-color: var(--color-surface-base); color: var(--color-surface-white);">See all deals</button>
+        <div class="carousel-arrows">
+          <button class="arrow-btn" aria-label="Previous" style="opacity: 0.3; cursor: not-allowed;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6" /></svg></button>
+          <button class="arrow-btn" aria-label="Next"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" /></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <!-- Top Links Section -->
+      <div class="footer-top">
+        <div class="footer-column">
+          <h3 class="footer-heading">Company</h3>
+          <ul class="footer-link-list">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Join our team</a></li>
+            <li><a href="#">Travel Advisor Portal</a></li>
+            <li><a href="#">CTAtravels GO rewards program</a></li>
+            <li><a href="#">Refer a friend program</a></li>
+            <li><a href="#">Save with your group</a></li>
+            <li><a href="#">Affiliate program</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3 class="footer-heading">Customer support</h3>
+          <ul class="footer-link-list">
+            <li><a href="#"><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> Chat with us</a></li>
+            <li><a href="#"><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> Help Center & FAQs</a></li>
+            <li><a href="#"><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> WhatsApp</a></li>
+            <li><a href="#"><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg> Facebook Messenger</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3 class="footer-heading">Policies</h3>
+          <ul class="footer-link-list">
+            <li><a href="#">General conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookies policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <hr class="footer-divider" />
+      
+      <!-- Middle Region Selector -->
+      <div class="footer-middle">
+        <!-- SVG Flag of US (Approximation using Emoji or small SVG) -->
+        <svg class="country-flag" viewBox="0 0 512 512">
+          <rect width="512" height="512" fill="#eee" />
+          <rect width="512" height="51" fill="#bf0a30" y="45" />
+          <rect width="512" height="51" fill="#bf0a30" y="147" />
+          <rect width="512" height="51" fill="#bf0a30" y="249" />
+          <rect width="512" height="51" fill="#bf0a30" y="351" />
+          <rect width="512" height="51" fill="#bf0a30" y="453" />
+          <rect width="256" height="276" fill="#002868" />
+          <!-- Star pattern omitted for brevity, represented as dark blue block -->
+        </svg>
+        <span>United States (EN) - English</span>
+      </div>
+      
+      <hr class="footer-divider" />
+      
+      <!-- Bottom Section -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-group">
+          <div class="app-badges">
+            <button class="app-badge-btn" aria-label="Get it on Google Play">
+              <svg class="app-badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 22.8c-.3.2-.6.2-.9.2-.6 0-1.2-.5-1.2-1.2V2.2c0-.7.5-1.2 1.2-1.2.3 0 .6.1.9.2l14.7 9.8c.6.4.9 1 .9 1.7 0 .7-.3 1.3-.9 1.7L3.6 22.8z"></path></svg>
+              <div class="app-badge-text">
+                <span class="app-badge-small">GET IT ON</span>
+                <span class="app-badge-large">Google Play</span>
+              </div>
+            </button>
+            <button class="app-badge-btn" aria-label="Download on the App Store">
+              <svg class="app-badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16 2.3c-.8.8-2 1.3-3.1 1.3-.1-1.2.4-2.4 1.2-3.1C14.8-.4 16-.9 17.1-1c.1 1.2-.4 2.3-1.1 3.3zM16.9 7.7c-2 0-3.3 1.3-5 1.3s-2.8-1.1-4.7-1.1C3.8 7.9 1 10.7 1 15.5c0 4.1 2.6 8.3 5.4 8.3 1.6 0 2.4-1 4.5-1 2.1 0 2.9 1 4.6 1 3-2.9 4.3-6.5 4.3-6.5-2.8-1.2-4.1-3.7-4.1-6.6.2-1.7 1.4-3.2 2.7-3.9-1.2-1.8-3.4-2-4.3-2z"></path></svg>
+              <div class="app-badge-text">
+                <span class="app-badge-small">Download on the</span>
+                <span class="app-badge-large">App Store</span>
+              </div>
+            </button>
+          </div>
+          
+          <div class="trustpilot-block">
+            <div class="trustpilot-stars">
+              Excellent
+              <div class="trustpilot-stars-images">
+                <div class="star-img"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                <div class="star-img"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                <div class="star-img"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                <div class="star-img"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                <div class="star-img" style="background: linear-gradient(to right, #00b67a 50%, #ccc 50%);"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+              </div>
+            </div>
+            <div class="trustpilot-reviews"><u>33,981 reviews on</u> <strong>&#9733; Trustpilot</strong></div>
+          </div>
+        </div>
+        
+        <div class="social-links">
+          <button class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></button>
+          <button class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></button>
+          <button class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></button>
+          <button class="social-btn" aria-label="Blog"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></button>
+          <button class="social-btn" aria-label="YouTube"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></button>
+          <button class="social-btn" aria-label="Spotify"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 11.5c4-1 8.5-.5 10 0"></path><path d="M7 15c3.5-1 7.5-.5 9 0"></path><path d="M9 8c4-1.5 10-1.5 11 0"></path></svg></button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="components/search-bar/search-bar.js"></script>
+  <script src="pages/home/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+:root {
+  /* Typography */
+  --font-primary: 'DM Sans', sans-serif;
+  --font-handwriting: 'Caveat', cursive;
+  --font-logo: 'Snaga Uni Display', 'Syne', sans-serif;
+  
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 48px;
+  --font-size-hero: 64px; /* Extrapolated for large hero text */
+  --font-size-hero-sub: 28px; /* Extrapolated */
+
+  --font-weight-base: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+
+  --line-height-base: 24px;
+  --line-height-tight: 1.2;
+
+  /* Colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #121212;
+  --color-text-tertiary: #5e5e5e;
+  
+  --color-surface-base: #000000;
+  --color-surface-white: #ffffff;
+  
+  /* Additional colors extracted from screenshot */
+  --color-brand-yellow: #edd563; /* Updated per user request */
+  --color-overlay-dark: rgba(0, 0, 0, 0.4);
+  --color-border-light: rgba(255, 255, 255, 0.3);
+
+  /* Spacing */
+  --spacing-2xs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  --spacing-4xl: 96px;
+
+  /* Motion */
+  --motion-duration-instant: 200ms;
+  --motion-easing: ease-in-out;
+  
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-pill: 9999px;
+}

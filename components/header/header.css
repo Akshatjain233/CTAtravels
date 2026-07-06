@@ -1,0 +1,104 @@
+/* --- Top Banner --- */
+.top-banner {
+  background-color: var(--color-brand-yellow);
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: var(--spacing-sm) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2xs);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.top-banner .badge {
+  border: 1px solid var(--color-text-secondary);
+  border-radius: var(--radius-pill);
+  padding: 2px var(--spacing-sm);
+  font-size: var(--font-size-xs);
+}
+
+/* --- Header / Navigation --- */
+.header {
+  position: absolute; /* Relative to hero section initially */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: var(--spacing-xl) 0; /* Increased vertical padding */
+  color: var(--color-text-primary);
+  background-color: transparent;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.header.scrolled {
+  position: fixed; /* Stick to top of viewport when scrolled past top banner */
+  background-color: #121212; /* Custom dark background as requested */
+  padding: var(--spacing-md) 0; /* Slightly smaller padding when scrolled */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: var(--spacing-lg) !important; /* Override global 7% padding */
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex: 1;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.nav-link {
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+  opacity: 0.9;
+}
+
+.nav-link:hover, .nav-link:focus-visible {
+  opacity: 1;
+}
+
+.logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensure vertical centering */
+  flex: 1;
+}
+
+.logo-text {
+  font-family: var(--font-logo);
+  font-size: 40px; /* Increased by ~20% */
+  font-weight: bold; /* Bold as requested */
+  letter-spacing: -1px;
+}
+
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2xs);
+  border-left: 1px solid var(--color-border-light);
+  padding-left: var(--spacing-md);
+  margin-left: -var(--spacing-sm);
+}
+
+.mobile-menu-btn, .mobile-call-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-left, .nav-right {
+    display: none;
+  }
+
+  .mobile-menu-btn, .mobile-call-btn {
+    display: inline-flex;
+  }
+}

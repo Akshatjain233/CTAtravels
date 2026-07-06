@@ -1,0 +1,109 @@
+/* --- Trip Card Component --- */
+.trip-card {
+  flex: 0 0 auto;
+  width: 320px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--spacing-md);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--spacing-lg);
+  color: var(--color-surface-white);
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+  scroll-snap-align: start;
+  transition: transform var(--motion-duration-instant);
+}
+
+.trip-card:hover, .trip-card:focus-visible {
+  transform: translateY(-4px);
+}
+
+.trip-card::before {
+  /* Gradient overlay for readability */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.2) 50%,
+    rgba(0,0,0,0.8) 100%
+  );
+  z-index: 1;
+}
+
+.trip-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.card-badge {
+  position: absolute;
+  top: var(--spacing-lg);
+  left: var(--spacing-lg);
+  background-color: var(--color-brand-yellow);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  padding: 4px 8px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-badge.dark {
+  background-color: rgba(18, 18, 18, 0.8);
+  color: var(--color-surface-white);
+  backdrop-filter: blur(4px);
+}
+
+.card-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.2;
+  margin-top: auto; /* Push text block to bottom */
+}
+
+.card-subtitle {
+  font-size: var(--font-size-sm);
+  opacity: 0.8;
+  margin-bottom: var(--spacing-md);
+}
+
+.card-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.price-from {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+}
+
+.price-original {
+  text-decoration: line-through;
+  opacity: 0.6;
+  font-size: var(--font-size-xs);
+}
+
+.discount-badge {
+  background-color: var(--color-surface-white);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  padding: 4px 8px;
+  border-radius: var(--radius-pill);
+}
